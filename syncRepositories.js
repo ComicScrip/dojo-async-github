@@ -15,7 +15,6 @@ function getUserRepos(username) {
 
 async function run() {
   const users = await db.user.findMany();
-  console.log(users);
 
   const syncUserPromises = users.map(async (user) => {
     console.log(`getting repos for ${user.githubUsername}`);
